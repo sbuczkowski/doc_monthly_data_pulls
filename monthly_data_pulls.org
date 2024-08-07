@@ -1,0 +1,22 @@
+* ERA5
+ - python scripts are in ~/git/era5_pipeline
+ - requires python 3 (default module load on hpc is python 2)
+ - software uses a driver file of "YYYY MM" entries
+   - ./ERA5_get_monthly_avg.sh driverfile
+ - Downloads to /asl/models/era5_monthly/INCOMING and files must be
+   moved out to /asl/models/era5_monthly/YYYY directories by hand
+   (create YYYY directories, if needed)
+
+* MERRA2
+
+* AIRS3STM
+ - Browse to NASA GES DISC
+ - search for AIRS3STM
+ - subset/get data and select YYYY/MM date range to pull
+ - download text file list (and move to hpc, if downloading to local computer)
+ - wget --load-cookies ~/.urs_cookies --save-cookies ~/.urs_cookies
+   --keep-session-cookies -i textlist.file
+   - requires NASA Earthdata account and login info in personal ~/.netrc file
+
+* CLIMCAPS_SNDR_AIRS_L3
+ - Same as AIRS3STM except search for SNDRAQIL3CMCCP
